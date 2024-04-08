@@ -1,0 +1,23 @@
+import turtle
+
+n = 12
+
+# Устанавливаем форму и скорость черепашки
+turtle.shape('turtle')
+turtle.speed('fastest')
+
+# Рисуем ноги паука
+angle = 360 / n  # угол между ногами
+for _ in range(n):
+    turtle.penup()
+    turtle.goto(0, 0)  # возвращаемся в центр
+    turtle.pendown()
+    turtle.setheading(angle * _)  # устанавливаем направление для ноги
+    turtle.forward(100)  # длина ноги паука
+    turtle.stamp()  # ставим отметку в конце ноги, чтобы создать вид лапок
+    turtle.penup()
+    turtle.goto(0, 0)  # возвращаемся в центр
+    turtle.pendown()
+
+turtle.hideturtle()  # прячем черепашку после завершения рисования
+turtle.done()
