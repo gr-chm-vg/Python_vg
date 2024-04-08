@@ -1,0 +1,14 @@
+import turtle
+
+turtle.shape('turtle')
+turtle.speed(0)  # Установка максимальной скорости черепахи
+
+number_of_sides = 100    # Количество сторон многоугольника для приближения к окружности
+side_length = 3          # Длина стороны многоугольника
+angle = 360 / number_of_sides  # Угол поворота для каждой стороны
+
+for _ in range(number_of_sides):  # Рисуем каждую сторону
+    turtle.forward(side_length)  # Движение вперед на заданную длину стороны
+    turtle.left(angle)          # Поворот на расчитанный угол
+
+turtle.done()  # Завершаем рисование
